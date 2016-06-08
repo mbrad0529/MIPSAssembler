@@ -1,2 +1,2 @@
 # MIPSAssembler
-Assembly parser for a subset of the MIPS Instruction SEt
+Assembly parser for a subset of the MIPS Instruction Set
