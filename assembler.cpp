@@ -97,7 +97,7 @@ void ParseInstructions(const std::string& in)
 	std::vector<std::string> sourceCode;
 	std::map<size_t, std::bitset<32>> instructions;
 
-	/* reads data from file, skipping if it is a label */
+	/* reads data from file */
 	do
 	{
 		std::string line;
