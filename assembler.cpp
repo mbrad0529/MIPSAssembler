@@ -696,7 +696,7 @@ std::string GetOffset(const std::string s, const std::map<std::string, size_t>& 
 	{
 		size_t i = map.find(s)->second;
 		size_t t = map.find(".data")->second;
-		int o = i - t;
+		size_t o = i - t;
 		std::bitset<16> b(o);
 		return b.to_string();
 	}
