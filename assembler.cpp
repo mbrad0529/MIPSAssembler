@@ -423,7 +423,7 @@ void ParseLabels(std::vector<std::string>& src, std::map<std::string, size_t>& l
 
 						for (; iter != token.end(); ++iter)
 						{
-							++distData;
+							distData += 4;
 						}
 					}
 					else if (*iter == ".space")
@@ -433,7 +433,7 @@ void ParseLabels(std::vector<std::string>& src, std::map<std::string, size_t>& l
 
 						for (int i = 0; i < stop; ++i)
 						{
-							++distData;
+							distData += 4;
 						}
 					}
 				}
@@ -696,7 +696,7 @@ std::string GetOffset(const std::string s, const std::map<std::string, size_t>& 
 	{
 		size_t i = map.find(s)->second;
 		size_t t = map.find(".data")->second;
-		size_t o = t - i;
+		int o = i - t;
 		std::bitset<16> b(o);
 		return b.to_string();
 	}
